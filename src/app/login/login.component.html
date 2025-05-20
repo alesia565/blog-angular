@@ -1,0 +1,8 @@
+<div class="login-container">
+    <h2>Iniciar sesión</h2>
+    <form (ngSubmit)="login()">
+      <input type="text" [(ngModel)]="nombre" name="nombre" placeholder="Tu nombre" required />
+      <button type="submit">Entrar</button>
+    </form>
+    <p>¿No tienes cuenta? <a routerLink="/registro">Regístrate</a></p>
+  </div>

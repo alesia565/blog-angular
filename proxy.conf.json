@@ -1,0 +1,10 @@
+{
+  "/api/news": {
+    "target": "https://newsapi.org",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api/news": "/v2/top-headlines?category=technology&language=es&pageSize=5&apiKey=49261354f7a245079417094c23d9218e"
+    }
+  }
+}
