@@ -14,7 +14,8 @@ Tecnologías utilizadas
 	•	Estilos: CSS/SCSS
 	•	Otros: Angular Router, HttpClient, servicios personalizados
 Instalación
-	1.	Clona el repositorio:
+
+1.	Clona el repositorio:
  
 ```bash
 git clone https://github.com/alesia565/blog-angular.git
