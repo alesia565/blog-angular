@@ -1,59 +1,44 @@
-# BlogAngular
+BlogAngular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+Aplicación de blog desarrollada con Angular, que muestra noticias tecnológicas en tiempo real. Los usuarios pueden visualizar artículos sin necesidad de iniciar sesión, y disfrutar de una experiencia web moderna y rápida.
 
-## Development server
+Características
+	•	Visualización de noticias de tecnología en tiempo real mediante integración con una API externa.
+	•	Interfaz responsiva y moderna.
+	•	Acceso público a las noticias principales sin necesidad de iniciar sesión.
+	•	Proyecto ideal para practicar integración de servicios y diseño de componentes en Angular.
 
-To start a local development server, run:
+Tecnologías utilizadas
+	•	Framework: Angular 17+
+	•	Consumo de API: GNews o NewsAPI (según configuración)
+	•	Estilos: CSS/SCSS
+	•	Otros: Angular Router, HttpClient, servicios personalizados
+Instalación
+	1.	Clona el repositorio:
+ 
+```bash
+git clone https://github.com/alesia565/blog-angular.git
+cd blog-angular
+```
+2.	Instala las dependencias:
+
+```bash
+ng install
+```
+3.	Ejecuta la aplicación:
 
 ```bash
 ng serve
 ```
+4.	Abre http://localhost:4200 en tu navegador.
+	
+Estado del proyecto
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+En desarrollo. Algunas funciones futuras:
+	•	Filtros por categoría o fuente.
+	•	Sección de favoritos.
+	•	Panel de administración y perfil de usuario.
 
-## Code scaffolding
+Autora
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Alicia – @alesia565
