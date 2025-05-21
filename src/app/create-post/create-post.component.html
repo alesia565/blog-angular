@@ -1,6 +1,6 @@
 <div class="container">
     <h2>Nuevo post</h2>
-    <form (ngSubmit)="crearPost()">
+    <form (ngSubmit)="guardarPost()">
       <input type="text" placeholder="Título" [(ngModel)]="title" name="title" required />
       <textarea rows="6" placeholder="Contenido" [(ngModel)]="content" name="content" required></textarea>
       <button type="submit">Publicar</button>
