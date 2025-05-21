@@ -1,9 +1,25 @@
 <app-animated-wrapper>
   <div class="container">
+
+    <!-- Post destacado -->
+    <div *ngIf="posts.length > 0" class="destacado">
+      <h2>Post destacado</h2>
+      <h3>{{ posts[0].title }}</h3>
+      <p>{{ posts[0].content }}</p>
+    </div>
+
     <!-- Lista de posts -->
-    <div *ngFor="let post of posts" class="post">
+    <div *ngFor="let post of postsFiltrados" class="post">
       <h2><a [routerLink]="['/post', post.id]">{{ post.title }}</a></h2>
       <p>{{ post.content }}</p>
+      <small>Categoría: {{ post.categoria }}</small><br />
+      <small>Autor: {{ post.autor }}</small>
+
+      <!-- Botones solo para el autor -->
+      <div *ngIf="post.autor === usuarioActual" class="acciones">
+        <button class="boton-accion boton-editar" (click)="editarPost(post)">Editar</button>
+        <button class="boton-accion boton-eliminar" (click)="eliminarPost(post.id)">Eliminar</button>
+      </div>
     </div>
 
     <!-- Noticias de tecnología -->
@@ -16,5 +32,6 @@
       <a [href]="noticia.url" target="_blank">Leer más</a>
       <hr />
     </div>
+
   </div>
 </app-animated-wrapper>

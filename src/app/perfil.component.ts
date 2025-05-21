@@ -18,15 +18,26 @@ export class PerfilComponent {
     foto: ''
   };
 
+  usuarioActual: string | null = '';
+
   constructor(private router: Router) {}
 
   ngOnInit() {
-    const data = localStorage.getItem('perfil');
-    if (data) this.perfil = JSON.parse(data);
+    this.usuarioActual = localStorage.getItem('usuarioActual');
+    if (!this.usuarioActual) return;
+
+    const perfiles = JSON.parse(localStorage.getItem('perfiles') || '{}');
+    if (perfiles[this.usuarioActual]) {
+      this.perfil = perfiles[this.usuarioActual];
+    }
   }
 
   guardar() {
-    localStorage.setItem('perfil', JSON.stringify(this.perfil));
+    if (!this.usuarioActual) return;
+
+    const perfiles = JSON.parse(localStorage.getItem('perfiles') || '{}');
+    perfiles[this.usuarioActual] = this.perfil;
+    localStorage.setItem('perfiles', JSON.stringify(perfiles));
     alert('Perfil guardado');
   }
 

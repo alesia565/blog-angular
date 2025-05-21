@@ -30,6 +30,34 @@
 .post {
     animation: fadeIn 0.4s ease;
   }
+
+  .boton-accion {
+    padding: 6px 12px;
+    margin: 5px 4px 0 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .boton-editar {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .boton-editar:hover {
+    background-color: #3e8e41;
+  }
+  
+  .boton-eliminar {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .boton-eliminar:hover {
+    background-color: #d32f2f;
+  }
   
   @keyframes fadeIn {
     from {
