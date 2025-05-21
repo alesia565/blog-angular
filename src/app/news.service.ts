@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class NewsService {
-  private apiKey = '49261354f7a245079417094c23d9218e';
-  private apiUrl = `https://newsapi.org/v2/everything?q=tecnología&language=es&pageSize=5&apiKey=49261354f7a245079417094c23d9218e`;
+  private apiKey = 'Tu Codigo Secreto';
+  private apiUrl = `https://newsapi.org/v2/everything?q=tecnología&language=es&pageSize=5&apiKey=Tu Codigo Secreto`;
 
   constructor(private http: HttpClient) {}
 

@@ -4,6 +4,7 @@
     <div class="nav-links">
       <a routerLink="/">Inicio</a>
       <a routerLink="/nuevo" *ngIf="usuario">Nuevo post</a>
+      <a routerLink="/perfil" *ngIf="usuario">Perfil</a>
       <a routerLink="/login" *ngIf="!usuario">Iniciar sesión</a>
       <a routerLink="/registro" *ngIf="!usuario">Registrarse</a>
       <button (click)="logout()" *ngIf="usuario">Cerrar sesión</button>

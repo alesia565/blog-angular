@@ -1,0 +1,29 @@
+<div class="perfil-container">
+    <h1>Tu perfil</h1>
+  
+    <div class="form-group">
+      <label>Nombre:</label>
+      <input [(ngModel)]="perfil.nombre" placeholder="Tu nombre" />
+    </div>
+  
+    <div class="form-group">
+      <label>Biografía:</label>
+      <textarea [(ngModel)]="perfil.bio" placeholder="Cuéntanos sobre ti..."></textarea>
+    </div>
+  
+    <div class="form-group">
+      <label>Experiencia:</label>
+      <textarea [(ngModel)]="perfil.experiencia" placeholder="¿Dónde has trabajado o qué has hecho?"></textarea>
+    </div>
+  
+    <div class="form-group">
+      <label>Foto de perfil:</label>
+      <input type="file" (change)="subirFoto($event)" />
+      <img *ngIf="perfil.foto" [src]="perfil.foto" class="foto-perfil" />
+    </div>
+  
+    <div class="botones">
+      <button (click)="guardar()">Guardar</button>
+      <button (click)="logout()">Cerrar sesión</button>
+    </div>
+  </div>
