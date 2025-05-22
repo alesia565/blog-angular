@@ -1,71 +1,122 @@
-.post {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease;
-  }
-  
-  .post:hover {
-    transform: scale(1.01);
-  }
-  
-  .post h2 a {
-    color: #007acc;
-    text-decoration: none;
-  }
-  
-  .post h2 a:hover {
-    text-decoration: underline;
-  }
-
-  body {
+/* General */
+body {
   font-family: 'Inter', sans-serif;
   background: #f5f5f5;
   color: #222;
 }
 
-.post {
-    animation: fadeIn 0.4s ease;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  .boton-accion {
-    padding: 6px 12px;
-    margin: 5px 4px 0 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  
-  .boton-editar {
-    background-color: #4caf50;
-    color: white;
-  }
-  
-  .boton-editar:hover {
-    background-color: #3e8e41;
-  }
-  
-  .boton-eliminar {
-    background-color: #f44336;
-    color: white;
-  }
-  
-  .boton-eliminar:hover {
-    background-color: #d32f2f;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+/* Layout principal con 3 columnas */
+.principal-tres-columnas {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+.columna {
+  flex: 1;
+}
+
+.posts {
+  flex: 2;
+}
+
+/* Post */
+.post {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  animation: fadeIn 0.4s ease;
+}
+
+.post:hover {
+  transform: scale(1.01);
+}
+
+.post h2 a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.post h2 a:hover {
+  text-decoration: underline;
+}
+
+/* Botones */
+.boton-accion {
+  padding: 6px 12px;
+  margin: 5px 4px 0 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.boton-editar {
+  background-color: #4caf50;
+  color: white;
+}
+
+.boton-editar:hover {
+  background-color: #3e8e41;
+}
+
+.boton-eliminar {
+  background-color: #f44336;
+  color: white;
+}
+
+.boton-eliminar:hover {
+  background-color: #d32f2f;
+}
+
+/* Noticias (izquierda) */
+.noticias {
+  max-width: 350px;
+  background: #f0f0f0;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.noticia h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #1976d2;
+}
+
+.noticia p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Anuncios (derecha) */
+.anuncios {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.anuncio {
+  background-color: #fff3cd;
+  border-left: 5px solid #ffc107;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}

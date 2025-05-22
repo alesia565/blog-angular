@@ -1,37 +1,55 @@
 <app-animated-wrapper>
-  <div class="container">
+  <div class="principal-tres-columnas">
 
-    <!-- Post destacado -->
-    <div *ngIf="posts.length > 0" class="destacado">
-      <h2>Post destacado</h2>
-      <h3>{{ posts[0].title }}</h3>
-      <p>{{ posts[0].content }}</p>
-    </div>
-
-    <!-- Lista de posts -->
-    <div *ngFor="let post of postsFiltrados" class="post">
-      <h2><a [routerLink]="['/post', post.id]">{{ post.title }}</a></h2>
-      <p>{{ post.content }}</p>
-      <small>Categoría: {{ post.categoria }}</small><br />
-      <small>Autor: {{ post.autor }}</small>
-
-      <!-- Botones solo para el autor -->
-      <div *ngIf="post.autor === usuarioActual" class="acciones">
-        <button class="boton-accion boton-editar" (click)="editarPost(post)">Editar</button>
-        <button class="boton-accion boton-eliminar" (click)="eliminarPost(post.id)">Eliminar</button>
+    <!-- Noticias a la izquierda -->
+    <aside class="columna noticias">
+      <h2>Noticias de tecnología</h2>
+      <p *ngIf="!noticias || noticias.length === 0">Cargando noticias...</p>
+      <div *ngFor="let noticia of noticias" class="noticia">
+        <h4>{{ noticia.title }}</h4>
+        <p>{{ noticia.description }}</p>
+        <a [href]="noticia.url" target="_blank">Leer más</a>
+        <hr />
       </div>
-    </div>
+    </aside>
 
-    <!-- Noticias de tecnología -->
-    <h2>Noticias de tecnología</h2>
-    <p *ngIf="!noticias || noticias.length === 0">Cargando noticias o no se encontraron.</p>
+    <!-- Posts al centro -->
+    <main class="columna posts">
+      <div *ngIf="posts.length > 0" class="destacado">
+        <h2>Post destacado</h2>
+        <h3>{{ posts[0].title }}</h3>
+        <p>{{ posts[0].content }}</p>
+      </div>
 
-    <div *ngFor="let noticia of noticias" class="noticia">
-      <h4>{{ noticia.title }}</h4>
-      <p>{{ noticia.description }}</p>
-      <a [href]="noticia.url" target="_blank">Leer más</a>
-      <hr />
-    </div>
+      <div *ngFor="let post of postsFiltrados" class="post">
+        <h2><a [routerLink]="['/post', post.id]">{{ post.title }}</a></h2>
+        <p>{{ post.content }}</p>
+        <small>Categoría: {{ post.categoria }}</small><br />
+        <small>Autor: {{ post.autor }}</small>
+
+        <div *ngIf="post.autor === usuarioActual" class="acciones">
+          <button class="boton-accion boton-editar" (click)="editarPost(post)">Editar</button>
+          <button class="boton-accion boton-eliminar" (click)="eliminarPost(post.id)">Eliminar</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Anuncios a la derecha -->
+    <aside class="columna anuncios">
+      <h2>Anuncios</h2>
+      <div class="anuncio">
+        <strong>TodoCaucho</strong>
+        <p>Presupuestos de caucho personalizados.</p>
+      </div>
+      <div class="anuncio">
+        <strong>XpressWebPro</strong>
+        <p>Páginas web rápidas y económicas.</p>
+      </div>
+      <div class="anuncio">
+        <strong>Intercambio de Servicios</strong>
+        <p>Publica y consigue servicios sin dinero.</p>
+      </div>
+    </aside>
 
   </div>
 </app-animated-wrapper>
